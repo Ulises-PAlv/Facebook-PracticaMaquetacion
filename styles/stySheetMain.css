@@ -1,0 +1,127 @@
+/*  Hoja de estilos CSS */
+
+/* rem */
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /*1rem = 10px*/
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/* Globales */
+    body {
+        background-color: rgb(245, 245, 245);
+    }
+
+    h1 {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 3.5rem;
+        /*color: blue;*/
+    }
+
+    h5 {
+        font-size: 1.6rem;
+        text-align: center;
+        align-items: center;
+    }
+
+    img.perfil{
+        width: 15rem !important;
+        height: 18rem !important;
+        border-radius: 1rem 1rem 0 0;
+    }
+
+    img.perfilAñadir {
+        width: 160px !important;
+        height: 160px !important;
+        border-radius: 1rem 1rem 0 0;
+    }
+
+/* Utilidades */
+    .bordeR {
+        border-radius: 1rem;
+        transition: all .3s ease-in-out;
+    }
+
+    .efectoSombra:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 0px 10px #666;
+    }
+
+    .contenedorCentro{
+        text-align: center;
+        align-items: center;
+        margin: auto;
+    }
+
+    .btnTam {
+        width: 100%;
+        font-size: 1.2rem;
+        font-weight: bolder;
+        padding: 1rem;
+    }
+
+    .centrar-texto {
+        align-items: center;
+    }
+
+    .mAuto {
+        margin: auto;
+    }
+
+    .bold {
+        font-weight: bolder;
+    }
+
+
+/* Cambios a B4 */
+
+/*  Formato */
+    .muchoPadding{
+        padding-top: 12rem;
+    }
+
+    .pl-15 {
+        padding-left: 15rem;
+    }
+
+    @media(max-width:1200px) {
+        .pl-15 {
+            padding-left: 0;
+        }
+    }
+
+/*  Section login   */
+    .contenedorLogin {
+        margin: auto;
+        margin-top: 4rem;
+        /*margin-left: 0;*/
+        width: 41rem;
+        padding: 2rem 2rem;
+        border: 1px solid rgb(216, 208, 208);
+        border-radius: 1rem;
+        box-shadow: 0px 0px 6px #666;
+    }
+
+    .largeInputLogin {
+        padding: 2.2rem 1rem !important;
+        font-size: 1.2rem;
+        border-radius: .7rem;
+        margin-bottom: 1rem;
+    }
+
+    .linkLogin {
+        font-size: 1.4rem;
+    }
+
+    /*  Footer  */
+    .footer{
+        background-color: rgb(255, 255, 255);
+        padding: 2rem;
+        margin: 0;
+    }

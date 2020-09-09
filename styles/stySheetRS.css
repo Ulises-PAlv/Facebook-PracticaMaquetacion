@@ -1,0 +1,508 @@
+/*  CSS Document: Pagina principal Facebook */
+
+/* rem */
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /*1rem = 10px*/
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/*  Globales  */
+    body {
+        font-family: 'Open Sans', sans-serif;
+        background-color: rgb(42, 40, 40);
+    }
+
+    h2,
+    h3,
+    h4 {
+        font-family: 'Oswald', sans-serif;
+    }
+
+    hr {
+        background-color: white;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+/*################################################################*/
+/*##    Utilidades   #############################################*/
+/*################################################################*/
+
+    .centrar {
+        align-items: center;
+        text-align: center;
+        margin: auto;
+    }
+
+    .contenedor {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .contenedor2 {
+        width: 75%;
+        margin: 0 auto;
+    }
+
+    @media (min-width: 768px) {
+        .contenedor {
+            width: 90%;
+        }
+    }
+
+    @media (min-width: 992px) {
+        .contenedor {
+            width: 90%;
+            max-width: 1100px;
+        }
+    }
+
+    .centrar-texto {
+        text-align: center;
+    }
+
+    .no-margin {
+        margin: 0;
+    }
+
+    /*Utilidades de seccion*/
+    .seccion p{
+    font-size: 1.2rem;
+    text-align: center;
+    }
+
+    .separador::after{
+    /*Siempre que se use after o before, poner un content*/
+    content: '';
+    margin: 0 auto;
+    background-image: url(../img/separador.png);
+    display: block;
+    height: 3rem;
+    width: 10rem;
+    }
+
+    .margin-top-Pw{
+        margin-top: 1.5rem !important;
+    }
+
+    .button{
+    display: inline-block;
+    margin: 1rem 0;
+    background-color: orangered;
+    padding: 1rem 4rem;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    transition: color .3s ease-in-out;
+    }
+
+    .button:hover{
+    color: black;
+    }
+
+    /*clase diferencia botones, mercadotecnia*/
+    .hollow{
+        background-color: white;
+        color: orangered;
+        border: 1px solid orangered;
+        transition: all .3s ease-in-out;
+    }
+
+    .hollow:hover{
+        color: white;
+        background-color: orangered;
+    }
+
+    .float-rigth{
+    float: right;
+    }
+
+    .transparente{
+        background-color: rgba(255, 255, 255, 0);
+        color: white;
+        font-size: 1.5rem;
+        border: 2px solid white;
+        transition: all .4s ease-in-out;
+    }
+
+    .transparente:hover{
+        background-color: rgba(255, 255, 255, .3);
+        color: white;
+    }
+
+    .contenedorAside {
+        border-radius: .8rem;
+        padding: .5rem;
+        margin-bottom: 1rem;
+        transition: all .3s ease-in-out;
+    }
+
+    .contenedorAside:hover {
+        background-color: #eee8e82a;
+    }
+
+    /*Fonts*/
+    .montserrat-f {
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .openSans-f {
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    .inconsolata-f {    /*Texto formal*/
+        font-family: 'Inconsolata', monospace;
+    }
+
+    .oswald-f {
+        font-family: 'Oswald', sans-serif;
+    }
+
+/*  Modificacion b4   */
+
+/*################################################################*/
+/*##    Inicio estilos unicos   ##################################*/
+/*################################################################*/
+
+/*  Nav Bar  */
+    .barra {
+        background-color: #353535;
+        padding: .3rem 0;
+    }
+
+    .logo {
+        margin-right: .5rem;
+    }
+
+    .inputBar {
+        margin-top: .3rem;
+        width: 25rem;
+        padding: 1.8rem;
+        background-color: #474747a6;
+        border-radius: 2.5rem;
+        border-color: #353535;
+    }
+
+    .navIcon {
+        font-size: 2rem;
+        color: #7c7a7a;
+        margin-top: .4rem;
+        transition: all .3s ease-in-out;
+    }
+
+    .contenedorIcon {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 1rem 3.3rem;
+        margin-left: .3rem;
+        border-radius: 1rem;
+        transition: all .4s ease-in-out;
+    }
+
+    .contenedorIcon:hover {
+        background-color: #c5bebe30;
+    }
+
+    .contenedorIcon:hover .navIcon {
+        color: orangered;
+        text-shadow: aliceblue;
+    }
+
+    .contenedorIPerfil {
+        /*align-items: center;*/
+        margin: auto;
+        border-radius: 2rem;
+        transition: all .4s ease-in-out;
+        padding: .3rem .8rem;
+    }
+
+    .contenedorIPerfil:hover {
+        background-color: #c5bebe5a;
+    }
+
+    .usernameNav {
+        font-size: 1.4rem;
+        color: white;
+        font-weight: bold;
+    }
+    
+    .contenedorIcon2 {
+        padding: 1rem;
+        margin-left: .8rem;
+        border-radius: 5rem;
+        background-color: #c5bebe5a;
+        transition: all .4s ease-in-out;
+    }
+
+    .contenedorIcon2:hover {
+        background-color: #ffffff5a;
+    }
+
+    .navIcon2 {
+        margin-top: .3rem;
+        font-size: 1.7rem;
+        color: white;
+    }
+
+/*  Aside accesos directos  */
+    .textoAside {
+        color: white;
+        font-size: 1.3rem;
+        margin: auto;
+    }
+
+    .iconAside {
+        font-size: 2rem;
+        color: orangered;
+        margin-left: .5rem;
+        padding: .3rem;
+    }
+
+    .imgAside {
+        width: 3.6rem;
+    }
+
+    .titleAside {
+        font-size: 2.2rem;
+        color: #eee8e8de;
+        margin: auto;
+        margin-left: 2rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .textFooterAside {
+        color: #eee8e8de;
+        font-size: 1.3rem;
+        font-family: 'Inconsolata', monospace;
+    }
+
+    .linkFooter {
+        color: #d6d2d2de;
+    }
+
+    .linkFooter:hover {
+        color: orangered;
+        text-transform: none;
+    }
+
+    /*  Aside contactos y anuncios  */
+
+        /*Hacer scroll en aside*/
+        .scrollAside::-webkit-scrollbar {
+            width: 1em;
+        }
+
+        .scrollAside::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        }
+        
+        .scrollAside::-webkit-scrollbar-thumb {
+            background-color: darkgrey;
+            outline: 1px solid slategrey;
+        }
+
+    .imgAnuncio {
+        height: 10rem;
+        border-radius: .8rem;
+        margin-right: .5rem;
+    }
+
+    .nombreCumple {
+        font-size: 1.5rem;
+        font-weight: bolder;
+        color: #afa9a9de;
+    }
+
+    .iconAside2 {
+        font-size: 1.2rem;
+        color: rgba(255, 68, 0, 0.36);
+        margin-left: .5rem;
+        padding: .3rem;
+        transition: color .2s ease-in-out;
+    }
+
+    .contenedorAside:hover .iconAside2{
+        color: orangered;
+    }
+
+    .imgPerfilAside {
+        width: 3.2rem;
+        border-radius: 1rem;
+    }
+
+/*################################################################*/
+/*##    Estilos MAIN   ###########################################*/
+/*################################################################*/
+
+    /*  Estados */
+    .estados li{
+        padding: 1rem;
+        float: left;
+    }
+
+    .estado {
+        border-radius: 1rem;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .estado img {
+        width: 100%;
+        filter: grayscale(1);
+        -webkit-filter: grayscale(1);
+        transition: all .4s ease-in-out;
+        -webkit-transition: all .4s ease-in-out;
+    }
+
+    .estado img:hover {
+        filter: none;
+        /*scale hacer zoom*/
+        transform: scale(1.07);
+        /*transform: rotate(3deg); rota el elemento los grados deg*/
+        -webkit-filter: none;
+        -webkit-transform: scale(1.07);
+    }
+
+    .estado p{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: .3rem .8rem;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    text-align: left;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1rem;
+    color: orangered;
+    text-transform: uppercase;
+    transition: all .3s ease-in-out;
+    }
+
+    .invitado:hover p{
+        /*Aplica el hover a cualquier parte de invitado y se lo aplica a p*/
+        bottom: -8rem;
+        opacity: 0;
+    }
+
+    .imgPerfilEstado {
+        position: absolute;
+        filter: none !important;
+        top: .3rem;
+        left: .3rem;
+        border-radius: 1rem;
+        width: 3rem !important;
+        border: 2px solid orangered;
+        z-index: 1;
+    }
+
+    /*  Publicar    */
+    .contenedorPublicar {
+        background-color: #4c4a4aa8;
+        border-radius: 1rem;
+    }
+
+    .inputPublicar {
+        border-radius: 2rem;
+        background-color: #474747a6;
+        padding: 2rem;
+        margin: auto;
+        margin-left: 1rem;
+        margin-top: .6rem;
+        border: 2px solid rgba(255, 68, 0, 0.469);
+    }
+
+    .pubHr {
+        width: 95%;
+        background-color: #626161a6;
+    }
+
+    .iconSp1 {
+        color: rgba(188, 30, 188, 0.87);
+        font-size: 2.5rem;
+    }
+
+    .iconSp2 {
+        color: rgba(18, 183, 18, 0.816);
+        font-size: 2.5rem;
+    }
+
+    .iconSp3 {
+        color: rgba(218, 35, 214, 0.87);
+        font-size: 1.5rem;
+    }
+
+    .linkSalasCrear {
+        font-size: 1.5rem;
+        margin: auto;
+        margin-right: 1rem;
+        color: rgba(218, 35, 214, 0.87);
+    }
+
+    .linkSalasCrear:hover {
+        color: orangered;
+    }
+
+    .listaPerfiles li {
+        padding: .8rem;
+        float: left;
+    }
+
+    .perfilSala {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .perfilSala p {
+        position: absolute;
+        padding: 1.23rem 1.23rem;
+        bottom: 0rem;
+        left: 0;
+        margin: 0;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.442);
+        width: 100%;
+        text-align: center;
+        font-size: 1rem;
+        color: white;
+        transition: all .3s ease-in-out;
+    }
+
+    .perfilSala p:hover {
+        background-color: rgba(255, 255, 255, 0.693);
+    }
+
+    .contenedorMenuPublic {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: .5rem .5rem !important;
+        margin-left: .3rem;
+        border-radius: 10rem;
+        transition: all .4s ease-in-out;
+    }
+
+    .contenedorMenuPublic:hover {
+        background-color: #c5bebe30;
+    }
+
+    .emoji1 {
+        font-size: 2rem;
+        color: rgba(224, 17, 17, 0.836);
+    }
+
+    .emoji2 {
+        font-size: 2rem;
+        color: rgba(231, 231, 12, 0.884);
+    }
+
